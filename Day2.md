@@ -1,14 +1,18 @@
-Day 2 - Variables
+## Day 2 - Variables
 
-What I learned
+# What I learned
+
 A variable is like a named container box that stores values.
 
-Example
+# Example
+
 name = "Lakshaga"  
 age = 30
 
-Python idea
+# Python idea
+
 Variables help us store information so we can reuse it later.
 
-My thought
+# My thought
+
 I am beginning to understand how computers store data.
