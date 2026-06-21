@@ -334,20 +334,22 @@ Knowledge
 
 Example 1: Sort Numbers
 
+
+```python
 numbers = [700, 300, 500]
 
 sorted_numbers = sorted(numbers)
 
 print(sorted_numbers)
-
+```
 Output:
-
+```text
 [300, 500, 700]
-
+```
 ---
 
 Example 2: Sort Books by Price
-
+```python
 books = [
     {"name": "Python Basics", "price": 500},
     {"name": "Advanced Python", "price": 900},
@@ -361,17 +363,17 @@ sorted_books = sorted(
 
 for book in sorted_books:
     print(book["name"], "→ ₹" + str(book["price"]))
-
+```
 Output:
-
+```text
 Python Beginner → ₹300
 Python Basics → ₹500
 Advanced Python → ₹900
-
+```
 ---
 
 Example 3: Sort Students by Marks
-
+```python
 students = [
     {"name": "Lakshaga", "marks": 85},
     {"name": "Ravi", "marks": 72},
@@ -387,18 +389,18 @@ sorted_students = sorted(
 
 for student in sorted_students:
     print(student["name"], "→", student["marks"])
-
+```
 Output:
-
+```text
 Priya → 91
 Arun → 88
 Lakshaga → 85
 Ravi → 72
-
+```
 ---
 
 Example 4: Search and Sort Together
-
+```python
 books = [
     {"name": "Python Basics", "price": 500},
     {"name": "Advanced Python", "price": 900},
@@ -419,13 +421,13 @@ sorted_books = sorted(
 
 for book in sorted_books:
     print(book["name"], "→ ₹" + str(book["price"]))
-
+```
 Output:
-
+```text
 Python Beginner → ₹300
 Python Basics → ₹500
 Advanced Python → ₹900
-
+```
 ---
 
 ## Key Understanding
