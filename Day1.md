@@ -12,4 +12,6 @@ Example (Tea making logic)
 4. Mix  
 
 My first Python code
-'''python print("I am starting as a programmwr using Python from zero")'''
+```python 
+print("I am starting as a programmwr using Python from zero")'''
+```
