@@ -129,3 +129,4 @@ The loop processes the information.
 ## My thought
 
 Now I understand that a list is like a book that stores pages, and a loop is like automatically reading every page in the book. The list stores the data, while the loop helps process the data without repeating instructions manually.
+so,in loop 3 worker, first traverse through pages, second do processing an actual action performed hear reading pages then in third automatic repetition of reading all n pages to find a word match (for example)
