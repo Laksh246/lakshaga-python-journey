@@ -92,6 +92,40 @@ Arun → EEE → 88
 
 ---
 
+#### Python Code
+
+```python
+students = [
+    {"name": "Lakshaga", "dept": "CSE", "mark": 85},
+    {"name": "Priya", "dept": "CSE", "mark": 91},
+    {"name": "Ravi", "dept": "ECE", "mark": 72},
+    {"name": "Kumar", "dept": "ECE", "mark": 80},
+    {"name": "Arun", "dept": "EEE", "mark": 88}
+]
+
+groups = {}
+
+for student in students:
+
+    dept = student["dept"]
+
+    if dept not in groups:
+        groups[dept] = []
+
+    groups[dept].append(student["mark"])
+
+print(groups)
+```
+
+#### Output
+
+```text
+{
+ 'CSE': [85, 91],
+ 'ECE': [72, 80],
+ 'EEE': [88]
+}
+```
 ## Step 1 - Group Students
 
 ```text
@@ -173,7 +207,59 @@ EEE → Average = 88
 This is category-wise summary information.
 
 ---
+#### Python Code
 
+```python
+students = [
+    {"name": "Lakshaga", "dept": "CSE", "mark": 85},
+    {"name": "Priya", "dept": "CSE", "mark": 91},
+    {"name": "Ravi", "dept": "ECE", "mark": 72},
+    {"name": "Kumar", "dept": "ECE", "mark": 80},
+    {"name": "Arun", "dept": "EEE", "mark": 88}
+]
+
+groups = {}
+
+for student in students:
+
+    dept = student["dept"]
+
+    if dept not in groups:
+        groups[dept] = []
+
+    groups[dept].append(student["mark"])
+
+for dept in groups:
+
+    average = (
+        sum(groups[dept])
+        / len(groups[dept])
+    )
+
+    print(
+        dept,
+        "Average =",
+        average
+    )
+```
+
+#### Output
+
+```text
+CSE Average = 88.0
+ECE Average = 76.0
+EEE Average = 88.0
+```
+
+#### Logic
+
+```text
+Group Records
+      ↓
+Aggregate Each Group
+      ↓
+Return Category Summaries
+```
 ## Library Example
 
 Books:
@@ -211,7 +297,42 @@ AI
 ```
 
 ---
+#### Python Code
 
+```python
+books = [
+    {"category": "Programming", "price": 500},
+    {"category": "Programming", "price": 900},
+    {"category": "Data", "price": 700},
+    {"category": "AI", "price": 800},
+    {"category": "AI", "price": 1000}
+]
+
+groups = {}
+
+for book in books:
+
+    category = book["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(
+        book["price"]
+    )
+
+print(groups)
+```
+
+#### Output
+
+```text
+{
+ 'Programming': [500, 900],
+ 'Data': [700],
+ 'AI': [800, 1000]
+}
+```
 ## Aggregate Each Category
 
 Programming:
@@ -253,7 +374,51 @@ AI → Average Price = ₹900
 ```
 
 ---
+#### Python Code
 
+```python
+books = [
+    {"category": "Programming", "price": 500},
+    {"category": "Programming", "price": 900},
+    {"category": "Data", "price": 700},
+    {"category": "AI", "price": 800},
+    {"category": "AI", "price": 1000}
+]
+
+groups = {}
+
+for book in books:
+
+    category = book["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(
+        book["price"]
+    )
+
+for category in groups:
+
+    average = (
+        sum(groups[category])
+        / len(groups[category])
+    )
+
+    print(
+        category,
+        "Average Price =",
+        average
+    )
+```
+
+#### Output
+
+```text
+Programming Average Price = 700.0
+Data Average Price = 700.0
+AI Average Price = 900.0
+```
 ## Programming Team Model
 
 ### Worker 1
@@ -261,7 +426,12 @@ AI → Average Price = ₹900
 Traverses records.
 
 ---
+#### Python Code
 
+```python
+for student in students:
+    print(student)
+```
 ### Worker 2
 
 Reads category and value.
@@ -294,6 +464,21 @@ Calculates summary for each group.
 
 ---
 
+#### Python Code
+
+```python
+for dept in groups:
+
+    average = (
+        sum(groups[dept])
+        / len(groups[dept])
+    )
+
+    print(
+        dept,
+        average
+    )
+```
 ### Worker 3
 
 Repeats for all records.
@@ -347,7 +532,27 @@ EEE → 88
 Multiple summaries.
 
 ---
+#### Python Code
 
+```python
+groups = {
+    "CSE": [85, 91],
+    "ECE": [72, 80],
+    "EEE": [88]
+}
+
+for dept in groups:
+
+    average = (
+        sum(groups[dept])
+        / len(groups[dept])
+    )
+
+    print(
+        dept,
+        average
+    )
+```
 ## Why This Matters
 
 Most real-world reports work this way.
@@ -385,7 +590,27 @@ Average book price by category
 ```
 
 ---
+#### Python Example
 
+```python
+department_marks = {
+    "CSE": [85, 91],
+    "ECE": [72, 80],
+    "EEE": [88]
+}
+
+for dept in department_marks:
+
+    average = (
+        sum(department_marks[dept])
+        / len(department_marks[dept])
+    )
+
+    print(
+        dept,
+        average
+    )
+```
 ## Data Analysis Flow
 
 ```text
@@ -494,6 +719,68 @@ Decision Making
 ```
 
 ---
+---
+
+## Python Understanding
+
+```text
+Group
+ ↓
+Create Categories
+
+Aggregate
+ ↓
+Create Summary
+
+Group + Aggregate
+ ↓
+Category-wise Summary
+```
+
+### Core Pattern
+
+```python
+groups = {}
+
+for record in records:
+
+    category = record["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(
+        record["value"]
+    )
+
+for category in groups:
+
+    summary = (
+        sum(groups[category])
+        / len(groups[category])
+    )
+
+    print(
+        category,
+        summary
+    )
+```
+
+### Mental Model
+
+```text
+Records
+   ↓
+Read Category
+   ↓
+Create Groups
+   ↓
+Add Values
+   ↓
+Aggregate Group
+   ↓
+Category Summary
+```
 
 ## My Thought
 
