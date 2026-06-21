@@ -23,13 +23,14 @@ In programming, this fridge is called a LIST.
 ## Accessing Items in Fridge
 Each item inside the fridge has a position (index).
 Python
+```python
 fridge = ["milk", "eggs", "vegetables", "fruits"]
 
 print(fridge[0])  # milk
 print(fridge[1])  # eggs
 print(fridge[2])  # vegetables
 print(fridge[3])  # fruits
-
+```
 ## Important Concept
 List = fridge (container)
 Items inside = things stored in fridge
