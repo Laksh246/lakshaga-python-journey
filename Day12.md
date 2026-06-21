@@ -80,11 +80,12 @@ Repeats the process for all remaining pages.
 
 ## Python Idea
 
+```python
 page_contains_python = True
 
 if page_contains_python:
     print("Mark this page")
-
+```
 ---
 
 ## Understanding if
@@ -94,10 +95,10 @@ The word "if" means:
 «"Only do this action when the condition is true."»
 
 Example:
-
+```python
 if page_contains_python:
     print("Mark this page")
-
+```
 Meaning:
 
 - If the page contains "Python" → Mark it.
