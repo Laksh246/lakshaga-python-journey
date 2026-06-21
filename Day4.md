@@ -12,8 +12,9 @@ Waiter asks for order → input
 Waiter repeats order → output
 
 ## Python idea
+```python
 pin = input("Enter PIN")  
 print(pin)
-
+```
 ## My thought
 Now I understand programming is like real-world conversations where computer talks to human in written format without voice.
