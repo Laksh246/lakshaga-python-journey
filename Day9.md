@@ -37,7 +37,10 @@ These are only placeholders created when designing the camera system.
 Now we actually use the function:
 
 # Python
+```python
 take_photo("portrait", "off", "beauty")
+```
+
 Here:
 "portrait" → argument for mode
 "off" → argument for flash
