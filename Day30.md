@@ -158,6 +158,49 @@ Only Data Exists
 ```
 
 ---
+### Python Code
+
+```python
+library = [
+    {
+        "name": "Python Basics",
+        "category": "Programming",
+        "price": 500
+    },
+    {
+        "name": "Advanced Python",
+        "category": "Programming",
+        "price": 900
+    },
+    {
+        "name": "Data Science",
+        "category": "Data",
+        "price": 700
+    },
+    {
+        "name": "AI Fundamentals",
+        "category": "AI",
+        "price": 800
+    },
+    {
+        "name": "Machine Learning",
+        "category": "AI",
+        "price": 1000
+    }
+]
+
+print(library)
+```
+
+### Logic
+
+```text
+Records
+   ↓
+Stored In Memory
+   ↓
+Available For Processing
+```
 
 # Step 2 - Search
 
@@ -182,6 +225,41 @@ Which record?
 ```
 
 ---
+
+### Python Code
+
+```python
+search_book = "Python Basics"
+
+for book in library:
+
+    if book["name"] == search_book:
+
+        print("Found:", book)
+
+        break
+```
+
+### Output
+
+```text
+Found:
+{
+ 'name': 'Python Basics',
+ 'category': 'Programming',
+ 'price': 500
+}
+```
+
+### Logic
+
+```text
+Traverse Records
+      ↓
+Compare Name
+      ↓
+Find Match
+```
 
 # Step 3 - Filter
 
@@ -208,6 +286,39 @@ Which records satisfy a condition?
 ```
 
 ---
+
+### Python Code
+
+```python
+filtered_books = []
+
+for book in library:
+
+    if book["price"] < 800:
+
+        filtered_books.append(book)
+
+print(filtered_books)
+```
+
+### Output
+
+```text
+[
+ {'name': 'Python Basics', 'price': 500},
+ {'name': 'Data Science', 'price': 700}
+]
+```
+
+### Logic
+
+```text
+Traverse Records
+      ↓
+Apply Condition
+      ↓
+Keep Matches
+```
 
 # Step 4 - Sort
 
@@ -240,6 +351,33 @@ In what order?
 ```
 
 ---
+
+
+### Python Code
+
+```python
+sorted_books = sorted(
+    library,
+    key=lambda book: book["price"]
+)
+
+for book in sorted_books:
+
+    print(
+        book["name"],
+        "→ ₹" + str(book["price"])
+    )
+```
+
+### Logic
+
+```text
+Compare Prices
+      ↓
+Arrange Records
+      ↓
+Return Ordered Data
+```
 
 # Step 5 - Group
 
@@ -277,6 +415,54 @@ Which category?
 
 ---
 
+### Python Code
+
+```python
+groups = {}
+
+for book in library:
+
+    category = book["category"]
+
+    if category not in groups:
+
+        groups[category] = []
+
+    groups[category].append(
+        book["name"]
+    )
+
+print(groups)
+```
+
+### Output
+
+```text
+{
+ 'Programming': [
+     'Python Basics',
+     'Advanced Python'
+ ],
+ 'Data': [
+     'Data Science'
+ ],
+ 'AI': [
+     'AI Fundamentals',
+     'Machine Learning'
+ ]
+}
+```
+
+### Logic
+
+```text
+Read Category
+      ↓
+Create Group
+      ↓
+Add Record
+```
+
 # Step 6 - Aggregate
 
 Question:
@@ -305,6 +491,55 @@ What summary?
 
 ---
 
+### Python Code
+
+```python
+price_groups = {}
+
+for book in library:
+
+    category = book["category"]
+
+    if category not in price_groups:
+
+        price_groups[category] = []
+
+    price_groups[category].append(
+        book["price"]
+    )
+
+for category in price_groups:
+
+    average = (
+        sum(price_groups[category])
+        / len(price_groups[category])
+    )
+
+    print(
+        category,
+        "Average =",
+        average
+    )
+```
+
+### Output
+
+```text
+Programming Average = 700.0
+Data Average = 700.0
+AI Average = 900.0
+```
+
+### Logic
+
+```text
+Group Records
+      ↓
+Collect Values
+      ↓
+Calculate Average
+```
+
 # Step 7 - Information
 
 The system now provides:
@@ -324,6 +559,26 @@ Average Prices
 This is information.
 
 ---
+
+### Python Understanding
+
+```python
+print("Search Results")
+print("Filter Results")
+print("Sorted Results")
+print("Grouped Results")
+print("Average Prices")
+```
+
+### Logic
+
+```text
+Processed Data
+      ↓
+Useful Results
+      ↓
+Information
+```
 
 # Step 8 - Knowledge
 
@@ -346,7 +601,34 @@ AI books are the most expensive category.
 This understanding is knowledge.
 
 ---
+### Python Logic
 
+```python
+highest_average = max(
+    price_groups,
+    key=lambda category:
+    sum(price_groups[category])
+    / len(price_groups[category])
+)
+
+print(highest_average)
+```
+
+### Output
+
+```text
+AI
+```
+
+### Logic
+
+```text
+Information
+      ↓
+Pattern Recognition
+      ↓
+Knowledge
+```
 # Step 9 - Decision
 
 Based on knowledge:
@@ -364,6 +646,42 @@ Buy Programming or Data books.
 Decision making becomes possible.
 
 ---
+### Python Logic
+
+```python
+budget = 800
+
+for category in price_groups:
+
+    average = (
+        sum(price_groups[category])
+        / len(price_groups[category])
+    )
+
+    if average <= budget:
+
+        print(
+            "Recommended:",
+            category
+        )
+```
+
+### Output
+
+```text
+Recommended: Programming
+Recommended: Data
+```
+
+### Logic
+
+```text
+Knowledge
+      ↓
+Apply Rules
+      ↓
+Decision
+```
 
 ## Programming Team Model
 
@@ -630,6 +948,96 @@ Decision
 ```
 
 ---
+
+---
+
+## Complete Python Information System
+
+```python
+library
+      ↓
+
+search()
+      ↓
+
+filter()
+      ↓
+
+sort()
+      ↓
+
+group()
+      ↓
+
+aggregate()
+      ↓
+
+information
+      ↓
+
+knowledge
+      ↓
+
+decision
+```
+
+### Mental Model
+
+```text
+Data
+ ↓
+
+Search
+ ↓
+
+Filter
+ ↓
+
+Sort
+ ↓
+
+Group
+ ↓
+
+Aggregate
+ ↓
+
+Information
+ ↓
+
+Knowledge
+ ↓
+
+Decision
+```
+
+### What I Learned In Code
+
+```python
+# Store
+library = [...]
+
+# Search
+if book["name"] == target
+
+# Filter
+if price < 800
+
+# Sort
+sorted(records)
+
+# Group
+groups[category]
+
+# Aggregate
+sum(values)
+
+# Knowledge
+find_pattern()
+
+# Decision
+apply_rule()
+```
 
 ## My Thought
 
