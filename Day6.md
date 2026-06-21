@@ -16,7 +16,7 @@ We don’t brush teeth only once.
 
 We repeat it every day as a habit.
 
-### 🧠 Thinking like a loop:
+### Thinking like a loop:
 - Day 1 → Brush teeth  
 - Day 2 → Brush teeth  
 - Day 3 → Brush teeth  
@@ -26,6 +26,10 @@ This repetition is called a loop.
 
 ## Python idea
 Loops allow repetition of tasks automatically.
+```python
+for day in range(7):
+    print("Brush teeth")
+```
 
 ## My thought
 Now I understand how computers can repeat tasks without manual effort.
