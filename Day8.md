@@ -32,15 +32,16 @@ One button = one function
 Many hidden steps inside
 
 ## Python idea
+```python
 def take_photo():
     print("Opening camera")
     print("Focusing lens")
     print("Capturing image")
     print("Saving photo")
-
+```
 ---
-
+```python
 take_photo()
-
+```
 ## My thought
 Now I understand that functions help avoid repeating the same code again and again. A function is like a mobile app button that hides complex steps and gives one result.
