@@ -44,14 +44,14 @@ Mark Page  Ignore Page
 ---
 
 ## Python Idea
-
+```python
 contains_python = True
 
 if contains_python:
     print("Mark this page")
 else:
     print("Ignore this page")
-
+```
 ---
 
 ## Understanding if-else
@@ -59,10 +59,10 @@ else:
 if
 
 Runs when the condition is True.
-
+```python
 if contains_python:
     print("Mark this page")
-
+```
 Meaning:
 
 «If the page contains the word "Python", perform the action.»
@@ -72,10 +72,10 @@ Meaning:
 else
 
 Runs when the condition is False.
-
+```python
 else:
     print("Ignore this page")
-
+```
 Meaning:
 
 «If the page does not contain the word "Python", perform a different action.»
