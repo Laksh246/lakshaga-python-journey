@@ -44,13 +44,14 @@ This is the idea of a loop.
 
 ---
 
-🐍 Python Idea
+Python Idea
 
+```python
 book = ["Page 1", "Page 2", "Page 3", "Page 4"]
 
 for page in book:
     print("Reading", page)
-
+```
 ---
 
 ## What Happens Here?
