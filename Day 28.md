@@ -203,6 +203,52 @@ AI
 │
 ├── AI Fundamentals
 └── Machine Learning
+
+#### Python Code
+
+```python
+books = [
+    {"name": "Python Basics", "category": "Programming"},
+    {"name": "Data Science", "category": "Data"},
+    {"name": "AI Fundamentals", "category": "AI"},
+    {"name": "Advanced Python", "category": "Programming"},
+    {"name": "Machine Learning", "category": "AI"}
+]
+
+groups = {}
+
+for book in books:
+    category = book["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(book["name"])
+
+print(groups)
+```
+
+#### Output
+
+```text
+{
+ 'Programming': ['Python Basics', 'Advanced Python'],
+ 'Data': ['Data Science'],
+ 'AI': ['AI Fundamentals', 'Machine Learning']
+}
+```
+
+#### Logic
+
+```text
+Read Book
+    ↓
+Read Category
+    ↓
+Create Group If Needed
+    ↓
+Add Book To Group
+```
 ```
 
 Now similar books are together.
@@ -245,7 +291,42 @@ EEE
 └── Arun
 ```
 
+
 Now students are organized department-wise.
+
+#### Python Code
+
+```python
+students = [
+    {"name": "Lakshaga", "dept": "CSE"},
+    {"name": "Ravi", "dept": "ECE"},
+    {"name": "Priya", "dept": "CSE"},
+    {"name": "Arun", "dept": "EEE"},
+    {"name": "Kumar", "dept": "ECE"}
+]
+
+departments = {}
+
+for student in students:
+    dept = student["dept"]
+
+    if dept not in departments:
+        departments[dept] = []
+
+    departments[dept].append(student["name"])
+
+print(departments)
+```
+
+#### Output
+
+```text
+{
+ 'CSE': ['Lakshaga', 'Priya'],
+ 'ECE': ['Ravi', 'Kumar'],
+ 'EEE': ['Arun']
+}
+```
 
 ---
 
@@ -273,6 +354,41 @@ Average marks of EEE
 
 Now we can compare categories.
 
+#### Python Code
+
+```python
+students = [
+    {"name": "Lakshaga", "dept": "CSE", "mark": 85},
+    {"name": "Priya", "dept": "CSE", "mark": 91},
+    {"name": "Ravi", "dept": "ECE", "mark": 72},
+    {"name": "Kumar", "dept": "ECE", "mark": 80},
+    {"name": "Arun", "dept": "EEE", "mark": 88}
+]
+
+groups = {}
+
+for student in students:
+    dept = student["dept"]
+
+    if dept not in groups:
+        groups[dept] = []
+
+    groups[dept].append(student["mark"])
+
+for dept in groups:
+    average = sum(groups[dept]) / len(groups[dept])
+
+    print(dept, "Average =", average)
+```
+
+#### Output
+
+```text
+CSE Average = 88.0
+ECE Average = 76.0
+EEE Average = 88.0
+```
+
 ---
 
 ## Programming Team Model
@@ -283,6 +399,17 @@ Traverses records.
 
 ---
 
+#### Python Code
+
+```python
+books = [
+    {"name": "Python Basics", "category": "Programming"},
+    {"name": "Data Science", "category": "Data"}
+]
+
+for book in books:
+    print(book)
+```
 ### Worker 2
 
 Reads category information.
@@ -365,6 +492,42 @@ Repeat for remaining records
 
 ---
 
+#### Python Code
+
+```python
+books = [
+    {"name": "Python Basics", "category": "Programming"},
+    {"name": "Data Science", "category": "Data"},
+    {"name": "AI Fundamentals", "category": "AI"}
+]
+
+groups = {}
+
+for book in books:
+
+    category = book["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(book["name"])
+
+print(groups)
+```
+
+#### Logic
+
+```text
+Visit Record
+     ↓
+Read Category
+     ↓
+Find Group
+     ↓
+Add Record
+     ↓
+Repeat
+```
 ## Search vs Filter vs Sort vs Aggregate vs Group
 
 ### Search
@@ -436,6 +599,43 @@ Category-wise Collections
 ```
 
 ---
+
+#### Python Comparison
+
+```python
+books = [
+    {"name": "Python Basics", "category": "Programming"},
+    {"name": "Advanced Python", "category": "Programming"},
+    {"name": "AI Fundamentals", "category": "AI"}
+]
+
+groups = {}
+
+for book in books:
+
+    category = book["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(book["name"])
+
+print(groups)
+```
+
+#### Output
+
+```text
+{
+ 'Programming': [
+     'Python Basics',
+     'Advanced Python'
+ ],
+ 'AI': [
+     'AI Fundamentals'
+ ]
+}
+```
 
 ## Library Question Examples
 
@@ -586,6 +786,63 @@ Decision Making
 ```
 
 ---
+
+---
+
+## Python Understanding
+
+```text
+Search
+ ↓
+Comparison
+
+Filter
+ ↓
+Condition
+
+Sort
+ ↓
+Ordering
+
+Aggregate
+ ↓
+Summary
+
+Group
+ ↓
+Categorization
+```
+
+### Grouping Formula
+
+```python
+groups = {}
+
+for record in records:
+
+    category = record["category"]
+
+    if category not in groups:
+        groups[category] = []
+
+    groups[category].append(record)
+```
+
+### Mental Model
+
+```text
+Records
+   ↓
+Read Category
+   ↓
+Create Group
+   ↓
+Add Record
+   ↓
+Repeat
+   ↓
+Grouped Collections
+```
 
 ## My Thought
 
