@@ -88,6 +88,188 @@ Searching helps us find useful information from stored data.
 
 ---
 
+## Data vs Information
+
+Before learning searching, it is important to understand the difference between data and information.
+
+### Data
+
+Data is raw stored facts.
+
+Example:
+
+```text
+Book 1
+│
+├── Title  → Python Basics
+├── Author → John Smith
+├── Price  → ₹500
+
+Book 2
+│
+├── Title  → Data Science
+├── Author → Mary Jones
+├── Price  → ₹700
+```
+
+These are simply stored records.
+
+At this stage, they are data.
+
+---
+
+### Information
+
+Information is data that answers a question.
+
+Question:
+
+```text
+Which books cost more than ₹600?
+```
+
+After searching:
+
+```text
+Data Science → ₹700
+```
+
+This result is information because it is useful and answers a specific question.
+
+---
+
+## How Data Becomes Information
+
+```text
+Data
+  +
+Processing
+  +
+Question / Context
+  =
+Information
+```
+
+---
+
+### Example 1
+
+Data:
+
+```text
+Price → ₹700
+```
+
+Question:
+
+```text
+Is it above ₹600?
+```
+
+Information:
+
+```text
+Yes
+```
+
+---
+
+### Example 2
+
+Data:
+
+```text
+Title → Python Basics
+```
+
+Question:
+
+```text
+Do we have a Python book?
+```
+
+Information:
+
+```text
+Yes, Python Basics
+```
+
+---
+
+## Role of Searching
+
+Searching is the process that transforms stored data into useful information.
+
+Without searching:
+
+```text
+Library
+│
+├── Book 1
+├── Book 2
+└── Book 3
+```
+
+Only data exists.
+
+---
+
+With searching:
+
+```text
+Question:
+Which books are related to Python?
+
+Answer:
+Python Basics
+```
+
+Now data has become information.
+
+---
+
+## Updated Programming Team Model
+
+### Worker 1
+
+Traverses records.
+
+---
+
+### Worker 2
+
+Reads and processes data.
+
+---
+
+### Gate
+
+Checks whether the data satisfies the condition.
+
+---
+
+### Worker 3
+
+Repeats the process.
+
+---
+
+### Result
+
+Produces useful information.
+
+```text
+Data
+ ↓
+Processing
+ ↓
+Condition Check
+ ↓
+Information
+```
+
+---
+
 ## Real Life Example: Library Search
 
 Imagine a library.
@@ -428,6 +610,6 @@ Search
 
 ---
 
-## 💭 My Thought
+## My Thought
 
-Now I understand that searching is the process of finding specific information from stored data. A loop traverses records one by one, Worker 2 reads the details, the Gate checks whether the data matches the requirement, and Worker 3 repeats the process until a match is found or all records have been checked. Searching combines Lists, Dictionaries, Loops, and Conditions to answer useful questions from data.
+Now I understand that data is raw stored facts, while information is meaningful data that answers a question. Searching is the process that converts data into information. A loop traverses records, Worker 2 processes the data, the Gate checks conditions, and Worker 3 repeats the process until a match is found or all records are checked. Searching combines Lists, Dictionaries, Loops, and Conditions to transform stored data into useful information.
