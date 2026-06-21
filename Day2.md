@@ -5,10 +5,10 @@
 A variable is like a named container box that stores values.
 
 # Example
-
+```python
 name = "Lakshaga"  
 age = 30
-
+```
 # Python idea
 
 Variables help us store information so we can reuse it later.
