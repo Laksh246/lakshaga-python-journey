@@ -76,10 +76,10 @@ Now I understand that functions work like a mobile camera where parameters defin
 
 ## 🐍 Python Example (Function Definition)
 
-``` python
+```python
 def take_photo(mode, flash, filter):
     print("Mode:", mode)
     print("Flash:", flash)
     print("Filter:", filter)
- '''
+```
 
