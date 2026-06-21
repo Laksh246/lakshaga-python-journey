@@ -50,7 +50,7 @@ Yes  No
 ---
 
 ## Python Idea
-
+```python
 marks = 82
 
 if marks >= 90:
@@ -61,7 +61,7 @@ elif marks >= 50:
     print("Grade C")
 else:
     print("Fail")
-
+```
 ---
 
 ## Understanding the Keywords
