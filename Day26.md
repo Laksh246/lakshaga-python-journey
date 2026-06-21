@@ -501,3 +501,246 @@ Knowledge
 ## My Thought
 
 Now I understand that Search, Filter, and Sort have different purposes. Search finds a specific record, Filter selects all records that satisfy a condition, and Sort organizes records into a meaningful order. Real-world systems often combine all three operations to transform raw data into useful, organized information that supports decision making.
+
+## Python Code Examples
+
+---
+
+1. Search Example
+
+Goal
+
+Find a specific book.
+
+Programming Logic
+
+Traverse Records
+      ↓
+Check Exact Match
+      ↓
+Return Result
+
+Python Code
+```python
+books = [
+    "Python Basics",
+    "Data Science",
+    "AI Fundamentals",
+    "Python Beginner",
+    "Machine Learning"
+]
+
+search_book = "Python Basics"
+
+for book in books:
+    if book == search_book:
+        print("Found:", book)
+        break
+```
+Output
+
+Found: Python Basics
+
+Key Takeaway
+
+Search finds a specific record.
+
+Usually stops when the required item is found.
+
+---
+
+2. Filter Example
+
+Goal
+
+Find all books costing less than ₹800.
+
+Programming Logic
+
+Traverse Records
+      ↓
+Apply Condition
+      ↓
+Keep Matching Items
+      ↓
+Discard Others
+
+Python Code
+```python
+books = [
+    {"name": "Python Basics", "price": 500},
+    {"name": "Data Science", "price": 700},
+    {"name": "AI Fundamentals", "price": 900},
+    {"name": "Python Beginner", "price": 300},
+    {"name": "Machine Learning", "price": 800}
+]
+
+filtered_books = []
+
+for book in books:
+    if book["price"] < 800:
+        filtered_books.append(book)
+
+for book in filtered_books:
+    print(book["name"], "→ ₹" + str(book["price"]))
+```
+Output
+
+Python Basics → ₹500
+Data Science → ₹700
+Python Beginner → ₹300
+
+Key Takeaway
+
+Filter keeps all records
+that satisfy a condition.
+
+---
+
+3. Sort Example
+
+Goal
+
+Arrange books from cheapest to most expensive.
+
+Programming Logic
+
+Compare Prices
+      ↓
+Rearrange Order
+      ↓
+Return Organized Records
+
+Python Code
+```python
+books = [
+    {"name": "Python Basics", "price": 500},
+    {"name": "Data Science", "price": 700},
+    {"name": "AI Fundamentals", "price": 900},
+    {"name": "Python Beginner", "price": 300},
+    {"name": "Machine Learning", "price": 800}
+]
+
+sorted_books = sorted(
+    books,
+    key=lambda book: book["price"]
+)
+
+for book in sorted_books:
+    print(book["name"], "→ ₹" + str(book["price"]))
+```
+Output
+
+Python Beginner → ₹300
+Python Basics → ₹500
+Data Science → ₹700
+Machine Learning → ₹800
+AI Fundamentals → ₹900
+
+Key Takeaway
+
+Sorting does not remove records.
+
+It only changes their order.
+
+---
+
+4. Search + Filter + Sort Together
+
+Goal
+
+Find Python books, keep only books below ₹800, then sort by price.
+
+Programming Logic
+
+Search
+   ↓
+Python Books
+   ↓
+Filter
+   ↓
+Books Below ₹800
+   ↓
+Sort
+   ↓
+Cheapest to Costliest
+   ↓
+Final Result
+
+Python Code
+```python
+books = [
+    {"name": "Python Basics", "price": 500},
+    {"name": "Data Science", "price": 700},
+    {"name": "AI Fundamentals", "price": 900},
+    {"name": "Python Beginner", "price": 300},
+    {"name": "Machine Learning", "price": 800}
+]
+```
+# Search
+```python
+
+python_books = []
+
+for book in books:
+    if "Python" in book["name"]:
+        python_books.append(book)
+```
+# Filter
+```python
+cheap_python_books = []
+
+for book in python_books:
+    if book["price"] < 800:
+        cheap_python_books.append(book)
+
+# Sort
+final_result = sorted(
+    cheap_python_books,
+    key=lambda book: book["price"]
+)
+
+for book in final_result:
+    print(book["name"], "→ ₹" + str(book["price"]))
+```
+Output
+
+Python Beginner → ₹300
+Python Basics → ₹500
+
+Key Takeaway
+
+Real-world systems often combine
+Search, Filter, and Sort together.
+
+---
+
+## Mental Model in Python
+
+List of Records
+        ↓
+      Search
+        ↓
+  Specific Match
+        ↓
+      Filter
+        ↓
+ Relevant Records
+        ↓
+       Sort
+        ↓
+Organized Results
+        ↓
+   Information
+
+---
+
+## Python Understanding
+
+Search → Uses comparison (==)
+
+Filter → Uses conditions (if)
+
+Sort → Uses ordering rules (sorted())
+
+These three operations are among the most common data-processing tasks in Python and form the foundation of many real-world applications such as search engines, e-commerce websites, student management systems, library systems, and data analysis tools.
