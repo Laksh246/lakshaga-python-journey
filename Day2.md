@@ -106,6 +106,80 @@ If a value needs to be remembered, reused, or changed, a variable is usually the
 
 
 ---
+
+## Tea Making Logic: When to Use Variables and When Not To
+
+Suppose we make tea using the same recipe every day.
+```python
+water_cups = 1
+milk_cups = 1
+sugar_spoons = 2
+
+print("Making Tea")
+```
+Here:
+
+- "water_cups", "milk_cups", and "sugar_spoons" are stored in variables because they may change.
+- ""Making Tea"" is used only once, so a variable is not necessary.
+
+---
+
+Another example:
+```python
+drink_name = "Tea"
+
+print(drink_name)
+print("Boiling...")
+print("Tea Ready")
+```
+Here:
+
+Value| Variable Needed?| Reason
+"Tea"| Yes| Used as information that may change
+"Boiling..."| No| Used only once
+"Tea Ready"| No| Used only once
+
+---
+
+Imagine a tea shop.
+
+Different customers want different amounts of sugar.
+```python
+sugar_spoons = 1
+```
+or
+```python
+sugar_spoons = 3
+```
+A variable is useful because the value changes.
+
+But instructions such as:
+```python
+print("Add tea powder")
+print("Boil the mixture")
+```
+do not need variables because they are fixed messages.
+
+---
+
+## Practical Rule
+
+Use variables for information that can:
+
+- Change
+- Be reused
+- Be remembered
+
+Use direct values for information that:
+
+- Is fixed
+- Is used only once
+- Does not need to be remembered later
+
+Good programmers do not store everything in variables.
+
+They use variables only when the program benefits from them.
+---
 Tea Making Logic with Variables
 
 Suppose we want to store the ingredients needed to make tea.
